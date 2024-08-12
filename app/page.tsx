@@ -1,17 +1,3 @@
-import Image from "next/image";
-import QuestClose from "./components/Quest/QuestClose";
-import QuestOpen from "./components/Quest/QuestOpen";
-import QuestHead from "./components/Quest/QuestHead";
-import { Separator } from "@/components/ui/separator";
-import { Progress } from "@/components/ui/progress";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
 import DailyQuests from "./components/Quest/DailyQuests";
 import WeeklyQuests from "./components/Quest/WeeklyQuests";
 import BananasEarned from "./components/Quest/BananasEarned";

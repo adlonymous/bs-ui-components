@@ -86,7 +86,7 @@ const QuestOpen = ({ className, ...props }: QuestOpenProps) => {
               ) : (
                 <img src="/redcross.png" alt="tick" height={15} width={15} />
               )}
-              <img src="/roundgen2.png" alt="roundgen2" />
+              <img src="/roundgen2.png" alt="roundgen2" height={25} width={25} />
               <p className="text-slate-400 text-sm font-light">Hold at least one Gen2 monke</p>
             </div>
             <div className="flex flex-row gap-2 items-center justify-end">
@@ -105,7 +105,7 @@ const QuestOpen = ({ className, ...props }: QuestOpenProps) => {
               ) : (
                 <img src="/redcross.png" alt="tick" height={15} width={15} />
               )}
-              <img src="/roundgen3.png" alt="roundgen3" />
+              <img src="/roundgen2.png" alt="roundgen3" height={25} width={25} />
               <p className="text-slate-400 text-sm font-light">Hold at least one Gen3 monke</p>
             </div>
             <div className="flex flex-row gap-2 items-center justify-end">

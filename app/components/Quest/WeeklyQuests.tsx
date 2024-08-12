@@ -10,19 +10,26 @@ type Props = {};
 
 const WeeklyQuests = (props: Props) => {
   return (
-    <div id="weekly-quests" className="flex flex-col gap-4 w-full">
+    <div id="weekly-quests" className="flex flex-col gap-4 w-full font-dm">
       <div id="weekly-header" className="flex flex-col w-full">
         <div className="flex flex-row items-center w-full justify-between ">
           <h1 className="text-xl font-bold">Weekly</h1>
           <p>
-            Refreshes in <span className="p-1 bg-white text-sm rounded-md">4D</span>
-            <span className="p-1 bg-white text-sm rounded-md">23H</span>
-            <span className="p-1 ml-1 bg-white text-sm rounded-md">21M</span>
+            Refreshes in
+            <span className="p-1 bg-white text-sm rounded-md border-[1px] border-slate-400">
+              4D
+            </span>
+            <span className="p-1 ml-1 bg-white text-sm rounded-md border-[1px] border-slate-400">
+              23H
+            </span>
+            <span className="p-1 ml-1 bg-white text-sm rounded-md border-[1px] border-slate-400">
+              21M
+            </span>
           </p>
         </div>
         <div className="flex flex-row items-center w-full justify-start pt-2 gap-4">
           <p className="text-sm text-left">
-            <span className="text-lg">1&nbsp;</span>/&nbsp;1
+            <span className="text-lg font-bold">1&nbsp;</span>/&nbsp;1
           </p>
           <Progress value={100} />
         </div>
