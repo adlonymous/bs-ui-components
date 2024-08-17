@@ -11,7 +11,7 @@ const Header = (props: Props) => {
   const pathname = usePathname();
   return (
     <div>
-      <nav className="flex flex-row items-center md:justify-around justify-between bg-[#184623] md:px-16 h-[66px] px-4 mt-1">
+      <nav className="flex flex-row items-center md:justify-around justify-between bg-[#184623] md:px-16 h-[66px] px-4 mt-1 sticky top-0 z-[1001]">
         <div className="flex flex-row items-center justify-normal gap-4">
           <img src="/bananalogo.png" alt="logo" className="w-[28px] h-[22px]" />
           <h1 className="font-roc font-semibold text-lg -mb-1 tracking-wide">Banana Stand</h1>

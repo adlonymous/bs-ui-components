@@ -27,7 +27,7 @@ export default function RootLayout({
         <img
           src="/footer.png"
           alt="footer graphic"
-          className="w-[1440px] h-[240px] bg-inherit -mb-[241px] hidden md:block"
+          className="w-full h-[240px] object-cover bg-inherit -mb-[241px] hidden md:block"
         />
         <Footer />
       </body>
