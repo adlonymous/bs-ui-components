@@ -12,8 +12,6 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
@@ -22,6 +20,16 @@ import { Separator } from "@/components/ui/separator";
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import ShopItems from "../components/Shop/ShopItems";
+import { Checkbox } from "@/components/ui/checkbox";
+import Airdrops from "../../public/svgs/airdrops.svg";
+import Endorsements from "../../public/svgs/endorsements.svg";
+import Merch from "../../public/svgs/merch.svg";
+import Raffles from "../../public/svgs/raffles.svg";
+import Events from "../../public/svgs/events.svg";
+import Gen2 from "../../public/svgs/gen2.svg";
+import Gen3 from "../../public/svgs/gen3.svg";
+import GenBoth from "../../public/svgs/genboth.svg";
+import Globe from "../../public/svgs/globe.svg";
 
 export default function Shop() {
   const [searchOpen, setSearchOpen] = useState(false);
@@ -64,7 +72,7 @@ export default function Shop() {
                   </>
                 )}
               </div>
-              <div id="filter-mobile" className="md:hidden">
+              <div id="search-mobile" className="md:hidden">
                 <Drawer>
                   <DrawerTrigger className="bg-white p-2 border-[0.5px] border-black rounded-md">
                     <IconSearch stroke={1} />
@@ -102,7 +110,105 @@ export default function Shop() {
                     className="drawer-overlay z-[900]"
                   ></label>
                   <div className="menu bg-[#fdfced] text-base-content min-h-full w-80 p-4 rounded-2xl z-[1001]">
-                    <div></div>
+                    <div id="filter-head">
+                      <p className="text-black text-left text-2xl">Filter</p>
+                    </div>
+                    <div id="filter-full" className="text-black px-4">
+                      <div id="filter-categories">
+                        <div
+                          id="categories-header"
+                          className="flex flex-row justify-between items-center"
+                        >
+                          <p className="text-sm">Categories</p>
+                          <p className="text-green-500 text-xs">Reset</p>
+                        </div>
+                      </div>
+                      <div id="categories-list" className="w-full">
+                        <div
+                          id="category"
+                          className="flex flex-col justify-start gap-3 py-4 items-center w-full"
+                        >
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Airdrops />
+                              <p>Airdrops</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Endorsements />
+                              <p>Endorsements</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Merch />
+                              <p>Merch</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Raffles />
+                              <p>Raffles</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Events />
+                              <p>Events</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                        </div>
+                      </div>
+                      <Separator className="w-full" />
+                      <div
+                        id="exclusive-drops-header"
+                        className="flex pt-4 flex-row justify-between items-center"
+                      >
+                        <p className="text-sm">Exclusive Drops</p>
+                        <p className="text-green-500 text-xs">Reset</p>
+                      </div>
+                      <div id="exclusive-drops-list" className="w-full">
+                        <div
+                          id="drops"
+                          className="flex flex-col justify-start gap-3 py-4 items-center w-full"
+                        >
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Gen2 />
+                              <p>Gen 2</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Gen3 />
+                              <p>Gen 3</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <GenBoth />
+                              <p>Both</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Globe />
+                              <p>Oceania</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -126,11 +232,90 @@ export default function Shop() {
                           <p className="text-green-500 text-xs">Reset</p>
                         </div>
                       </div>
-                      <div id="categories-list">
+                      <div id="categories-list" className="w-full">
                         <div
                           id="category"
-                          className="flex flex-row justify-between items-center"
-                        ></div>
+                          className="flex flex-col justify-start gap-3 py-4 items-center w-full"
+                        >
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Airdrops />
+                              <p>Airdrops</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Endorsements />
+                              <p>Endorsements</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Merch />
+                              <p>Merch</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Raffles />
+                              <p>Raffles</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Events />
+                              <p>Events</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                        </div>
+                      </div>
+                      <Separator className="w-full" />
+                      <div
+                        id="exclusive-drops-header"
+                        className="flex pt-4 flex-row justify-between items-center"
+                      >
+                        <p className="text-sm">Exclusive Drops</p>
+                        <p className="text-green-500 text-xs">Reset</p>
+                      </div>
+                      <div id="exclusive-drops-list" className="w-full">
+                        <div
+                          id="drops"
+                          className="flex flex-col justify-start gap-3 py-4 items-center w-full"
+                        >
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Gen2 />
+                              <p>Gen 2</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Gen3 />
+                              <p>Gen 3</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <GenBoth />
+                              <p>Both</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                          <div className="flex flex-row justify-between items-center w-full">
+                            <div className="flex flex-row justify-start items-center gap-2">
+                              <Globe />
+                              <p>Oceania</p>
+                            </div>
+                            <Checkbox />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </DrawerContent>

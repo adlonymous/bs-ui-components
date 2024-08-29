@@ -1,14 +1,16 @@
 "use client";
-import React from "react";
-import QuestHead from "./Quest/QuestHead";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
-import ShopHead from "./Shop/ShopHead";
 import { IconShoppingCart } from "@tabler/icons-react";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import CartView from "./Shop/CartView";
+import QuestHead from "./Quest/QuestHead";
+import ShopHead from "./Shop/ShopHead";
 
-type Props = {};
-
-const Header = (props: Props) => {
+const Header = () => {
   const pathname = usePathname();
+  const [open, setOpen] = useState(false);
+
   return (
     <div>
       <nav className="flex flex-row items-center md:justify-around justify-between bg-[#184623] md:px-16 h-[66px] px-4 mt-1 sticky top-0 z-[1001]">
@@ -42,9 +44,16 @@ const Header = (props: Props) => {
         </div>
         <div className="hidden md:block">
           <div className="flex flex-row items-center gap-8">
-            <a href="/">
-              <IconShoppingCart stroke={2} />
-            </a>
+            <Popover open={open} onOpenChange={setOpen}>
+              <PopoverTrigger asChild>
+                <button onClick={() => setOpen(!open)}>
+                  <IconShoppingCart stroke={2} />
+                </button>
+              </PopoverTrigger>
+              <PopoverContent>
+                <CartView />
+              </PopoverContent>
+            </Popover>
             <a className="flex flex-row items-center gap-2" href="/profile">
               <img src="/smb.png" alt="User photo" className="w-[30px] h-[30px] rounded-full" />
               <p className="font-dm -mb-1 pl-1">Username</p>
@@ -52,8 +61,8 @@ const Header = (props: Props) => {
           </div>
         </div>
       </nav>
-      {pathname === "/" ? <QuestHead /> : null}
-      {pathname === "/shop" ? <ShopHead /> : null}
+      {pathname === "/" && <QuestHead />}
+      {pathname === "/shop" && <ShopHead />}
     </div>
   );
 };
