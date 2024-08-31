@@ -16,7 +16,7 @@ const WeeklyQuests = (props: Props) => {
           <h1 className="text-xl font-bold">Weekly</h1>
           <p>
             Refreshes in
-            <span className="p-1 bg-white text-sm rounded-md border-[1px] border-slate-400">
+            <span className="p-1 ml-1 bg-white text-sm rounded-md border-[1px] border-slate-400">
               4D
             </span>
             <span className="p-1 ml-1 bg-white text-sm rounded-md border-[1px] border-slate-400">

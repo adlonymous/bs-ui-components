@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { usePathname } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,16 +22,7 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/thw0szv.css" />
       </head>
-      <body className={`${inter.className} bg-[#184623] text-white`}>
-        <Header />
-        {children}
-        <img
-          src="/footer.png"
-          alt="footer graphic"
-          className="w-full h-[240px] object-cover bg-inherit -mb-[241px] hidden md:block"
-        />
-        <Footer />
-      </body>
+      <body className={`${inter.className} bg-[#184623] text-white`}>{children}</body>
     </html>
   );
 }
