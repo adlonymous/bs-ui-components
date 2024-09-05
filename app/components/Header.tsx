@@ -60,7 +60,7 @@ const Header = () => {
           </a>
         </div>
 
-        <div id="mobile-menu" className="w-[24px] fixed right-4 drawer md:hidden z-[1001]">
+        <div id="mobile-menu" className="w-[24px] fixed right-4 drawer md:hidden z-[2000]">
           <input id="my-drawer" type="checkbox" className="drawer-toggle" />
           <div className="drawer-content">
             {/* Page content here */}

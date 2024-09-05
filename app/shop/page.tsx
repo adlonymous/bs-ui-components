@@ -49,7 +49,7 @@ export default function Shop() {
         <div className="flex flex-col items-center justify-start max-w-[1000px] w-full gap-4">
           <div
             id="filter-bar"
-            className="flex md:flex-row flex-col-reverse md:gap-0 gap-4 justify-between md:items-end w-full sticky top-0 z-[1001] bg-[#fdfced] rounded-b-md py-2 "
+            className="flex md:flex-row flex-col-reverse md:gap-0 gap-4 justify-between md:items-end w-full sticky top-0 z-[1000] bg-[#fdfced] rounded-b-md py-2 "
           >
             <div
               id="filter-part"
